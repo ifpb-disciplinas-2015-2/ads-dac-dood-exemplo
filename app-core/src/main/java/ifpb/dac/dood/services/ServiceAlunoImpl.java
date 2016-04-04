@@ -9,6 +9,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import ifpb.dac.dood.ServiceAluno;
+import java.util.List;
 
 /**
  *
@@ -24,6 +25,12 @@ public class ServiceAlunoImpl implements ServiceAluno {
     @Override
     public void salvar(Aluno pessoa) {
         em.persist(pessoa);
+    }
+
+    @Override
+    public List<Aluno> listar() {
+        return em.createQuery("Select a From Aluno a", Aluno.class).
+                getResultList();
     }
 
 }

@@ -6,6 +6,7 @@
 package ifpb.dac.dood;
 
 import ifpb.dac.dood.model.Aluno;
+import java.util.List;
 
 /**
  *
@@ -14,4 +15,6 @@ import ifpb.dac.dood.model.Aluno;
 public interface ServiceAluno {
 
     public void salvar(Aluno pessoa);
+    
+    public List<Aluno> listar();
 }

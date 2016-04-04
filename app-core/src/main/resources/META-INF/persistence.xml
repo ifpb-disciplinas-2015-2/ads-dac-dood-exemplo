@@ -3,6 +3,7 @@
   <persistence-unit name="DoodExemplo" transaction-type="JTA">
     <jta-data-source>java:app/jbdc/doodexemplo</jta-data-source>
     <class>ifpb.dac.dood.model.Aluno</class>
+    <class>ifpb.dac.dood.model.Disciplina</class>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
